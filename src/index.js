@@ -9,10 +9,11 @@ const CSVReader = ({
   fileEncoding = 'UTF-8',
   inputId = null,
   inputStyle = {},
-  label,
+  labelClass,
   onError,
   onFileLoaded,
   parserOptions = {},
+  children
 }) => {
   const handleChangeFile = e => {
     let reader = new FileReader()
@@ -36,15 +37,17 @@ const CSVReader = ({
 
   return (
     <div className={cssClass}>
-      {label && <label htmlFor={inputId}>{label}</label>}
-      <input
-        className={cssInputClass}
-        type="file"
-        id={inputId}
-        style={inputStyle}
-        accept={accept}
-        onChange={e => handleChangeFile(e)}
-      />
+      <label className={labelClass}>
+        <input
+          className={cssInputClass}
+          type="file"
+          id={inputId}
+          style={inputStyle}
+          accept={accept}
+          onChange={e => handleChangeFile(e)}
+        />
+        {children}
+      </label>
     </div>
   )
 }
