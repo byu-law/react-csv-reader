@@ -1,10 +1,15 @@
 {
-  "name": "react-csv-reader",
+  "name": "@byu-law/react-csv-reader",
   "version": "2.0.2",
   "description": "React component that handles csv file input.",
   "main": "dist/react-csv-reader.js",
-  "repository": "https://github.com/byu-law/react-csv-reader",
-  "bugs": "https://github.com/byu-law/react-csv-reader/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/byu-law/react-csv-reader.git"
+  },
+  "bugs": {
+    "url": "https://github.com/byu-law/react-csv-reader/issues"
+  },
   "author": "Nicola Zambello (github.com/nzambello)",
   "homepage": "https://github.com/byu-law/react-csv-reader#readme",
   "license": "MIT",
